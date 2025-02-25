@@ -54,18 +54,23 @@ export const Hero = () => {
             ">Celebrate the joy of accomplishment with an app designed to track your progress, motivate your efforts, and celebrate your successes.</p>
 
             <button
-              className='bg-white rounded-lg px-5 py-2 text-black mt-8 cursor-pointer'
-            >Get for free</button>
+              className='bg-white rounded-lg px-5 py-2 text-black mt-8 cursor-pointer hover:bg-slate-50'
+            >
+              Get for free
+            </button>
 
             <motion.div className="hidden sm:inline absolute z-20 left-[-22%] top-[40%] cursor-pointer"
               drag
               dragSnapToOrigin
             >
-              <Image src={Cursor} alt="cursor" width={200} height={200} className="max-w-none"></Image>
+              <Image src={Cursor} alt="cursor" width={200} height={200} className="max-w-none" draggable="false"></Image>
             </motion.div>
 
-            <motion.div className="hidden sm:inline absolute z-20 right-[-27%] top-32">
-              <Image src={Message} alt="message" width={200} height={200} ></Image>
+            <motion.div className="hidden sm:inline absolute z-20 right-[-27%] top-32 cursor-pointer"
+              drag
+              dragSnapToOrigin
+            >
+              <Image src={Message} alt="message" width={200} height={200} className="max-w-none" draggable="false"></Image>
             </motion.div>
         </div>
       </div>
@@ -77,8 +82,9 @@ export const Hero = () => {
         h-[400px] w-[800px]
         sm:h-[768px] sm:w-[1536px]
         md:h-[1200px] md:w-[2400px]
+        sm:top-[83%]
         rounded-[100%] 
-        bg-[radial-gradient(ellipse_at_center,_#000000_0%,_#000000_60%,_#B48CDE_80%)] 
+        bg-[radial-gradient(ellipse_at_center,_#000000,_#000000_62%,_#B48CDE)] 
         border border-[#161616]">
       </div> 
     </main>
