@@ -24,9 +24,9 @@ const socials = [
 
 export const Footer = () => {
   return (
-    <section className="text-white/60 w-full text-center justify-center border-t border-white/20 py-5">
+    <footer className="text-white/60 w-full text-center justify-center border-t border-white/20 py-5">
       <div className="flex flex-col gap-4 sm:flex-row sm:justify-between sm:px-20">
-        <h6>© 2024 Your Company, Inc. All rights reserved</h6>
+        <h6>© 2025 Orca, Inc. All rights reserved</h6>
         <div className="flex gap-4 justify-center items-center">
           { socials.map(({ icon, link, alt }, index)  => (
             <Link href={ link } key={ index } target="_blank"><Image src={ icon } alt={ alt } height={ 24 } width={ 24 } className="invert"/></Link>
@@ -34,6 +34,6 @@ export const Footer = () => {
           }
         </div>
       </div>
-    </section>
+    </footer>
   );
 };
