@@ -15,8 +15,8 @@ export default function FAQ({ question, answer }: FAQProps) {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <div className='border-b border-white/50'>
-      <div onClick={ () => { setOpen(!isOpen) }} className='flex items-center justify-between my-8'>
+    <section className='border-b border-white/50'>
+      <div onClick={ () => { setOpen(!isOpen) }} className='flex items-center justify-between my-8 cursor-pointer'>
         <h6 className='font-bold text-[18px]/[28px]'>{ question }</h6>
         { !isOpen 
           ? 
@@ -54,6 +54,6 @@ export default function FAQ({ question, answer }: FAQProps) {
             null
         }
       </AnimatePresence>
-    </div>
+    </section>
   )
 }

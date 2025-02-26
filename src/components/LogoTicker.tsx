@@ -20,7 +20,7 @@ const images = [
 
 export const LogoTicker = () => {
   return (
-    <div className="w-full
+    <section className="w-full
       flex flex-col justify-center items-center gap-8
       overflow-hidden
       px-4 py-[72px]
@@ -52,6 +52,6 @@ export const LogoTicker = () => {
           ))}
         </motion.div>
       </div>
-    </div>
+    </section>
   )
 };

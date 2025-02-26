@@ -1,6 +1,8 @@
+"use client"
 import Menu from '@/assets/icons/menu.svg'
 import Image from "next/image";
 import Logo from "@/assets/images/logosaas.png"
+import { motion } from 'motion/react';
 
 export const Navbar = () => {
   return (
@@ -14,13 +16,22 @@ export const Navbar = () => {
 
       <nav className="hidden sm:flex gap-6 items-center justify-center">
         <ul className="text-gray-400 flex gap-6">
-          <li>About</li>
-          <li>Features</li>
-          <li>Updates</li>
-          <li>Help</li>
-          <li>Customers</li>
+          {["About", "Features", "Updates", "Help", "Customers"].map((item, index) => (
+          <motion.li
+            key={index}
+            className="cursor-pointer"
+            whileHover={{ color: "#ffffff" }}
+            transition={{ duration: 0.3 }}
+          >
+            {item}
+          </motion.li>
+      ))}
         </ul>
-        <button className="bg-white px-4 py-2 rounded-lg">Get for free</button>
+        <motion.button 
+          whileTap={{
+            scale: 0.9
+          }}
+        className="bg-white px-4 py-2 rounded-lg">Get for free</motion.button>
       </nav>
 
       <div className="sm:hidden border border-gray-400 rounded-lg p-2">

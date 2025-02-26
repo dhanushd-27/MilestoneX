@@ -53,11 +53,14 @@ export const Hero = () => {
               sm:w-[448px]
             ">Celebrate the joy of accomplishment with an app designed to track your progress, motivate your efforts, and celebrate your successes.</p>
 
-            <button
+            <motion.button
+              whileTap={{
+                scale: 0.9
+              }}
               className='bg-white rounded-lg px-5 py-2 text-black mt-8 cursor-pointer hover:bg-slate-50'
             >
               Get for free
-            </button>
+            </motion.button>
 
             <motion.div className="hidden sm:inline absolute z-20 left-[-22%] top-[40%] cursor-pointer"
               drag

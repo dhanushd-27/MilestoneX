@@ -25,7 +25,7 @@ const items = [
 
 export const FAQs = () => {
   return (
-    <div className="py-[72px] bg-[linear-gradient(to_bottom,_#5D2CA8_0%,_#000000_100%)] text-white
+    <section className=" relative -z-0 py-[72px] bg-[linear-gradient(to_bottom,_#5D2CA8_0%,_#000000_100%)] text-white
     sm:py-24
     ">
       <div className="w-full h-max px-4 flex items-center text-center justify-center">
@@ -40,6 +40,6 @@ export const FAQs = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

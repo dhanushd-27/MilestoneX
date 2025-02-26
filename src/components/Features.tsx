@@ -23,7 +23,7 @@ const features = [
 export const Features = () => {
 
   return (
-    <div
+    <section
       className="py-[72px] w-full
       flex flex-col items-center justify-center
       sm:py-[96px]"
@@ -53,6 +53,6 @@ export const Features = () => {
           ))
         }
       </div>
-    </div>
+    </section>
   );
 };

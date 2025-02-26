@@ -19,7 +19,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={clsx(dmSans.className, "antialiased")}
         style={{
-          backgroundColor: '#000000'
+          backgroundColor: '#000000',
+          zIndex: -10
         }}
       >{children}</body>
     </html>

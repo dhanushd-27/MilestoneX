@@ -15,7 +15,7 @@ export const ProductShowcase = () => {
   const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (
-    <div className="py-[72px] 
+    <section className="py-[72px] 
       flex items-center flex-col text-center justify-center gap-[56px]
       sm:py-24 bg-[linear-gradient(to_bottom,_#000000_0%,_#5D2CA8_100%)]
     ">
@@ -34,6 +34,6 @@ export const ProductShowcase = () => {
       >
         <Image src={ appScreen } alt="appScreen" className="shadow-md shadow-white/20"></Image>
       </motion.div>
-    </div>
+    </section>
   )
 };
