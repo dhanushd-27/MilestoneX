@@ -1,3 +1,5 @@
+import FAQ from "./FAQ";
+
 const items = [
   {
     question: "What payment methods do you accept?",
@@ -22,5 +24,22 @@ const items = [
 ];
 
 export const FAQs = () => {
-  return null;
+  return (
+    <div className="py-[72px] bg-[linear-gradient(to_bottom,_#5D2CA8_0%,_#000000_100%)] text-white
+    sm:py-24
+    ">
+      <div className="w-full h-max px-4 flex items-center text-center justify-center">
+        <div className="flex flex-col sm:gap-12 sm:w-[672px] ">
+          <h3 className="font-bold text-5xl/[48px] tracking-tighter">Frequently Asked Questions</h3>
+          <div>
+            {
+              items.map(( item, index ) => (
+                <FAQ question={ item.question } answer={ item.answer } key={ index }/>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
