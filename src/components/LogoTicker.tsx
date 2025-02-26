@@ -35,13 +35,14 @@ export const LogoTicker = () => {
             translateX: 0
           }}
           animate={{
-            translateX: '-70%'
+            translateX: '-70%',
           }}
           transition={{
             ease: 'linear',
             duration: 20,
             repeat: Infinity
           }}
+          
         >
           { images.map(({src, alt}) => (
             <Image src={ src } alt={ alt } key={ alt } height={32}></Image>

@@ -1,5 +1,6 @@
-import Image from 'next/image';
-import Ecosystem from "@/assets/icons/ecosystem.svg"
+"use client"
+
+import Feature from './Feature';
 
 const features = [
   {
@@ -20,6 +21,7 @@ const features = [
 ];
 
 export const Features = () => {
+
   return (
     <div
       className="py-[72px] w-full
@@ -40,30 +42,13 @@ export const Features = () => {
       </p>
 
       <div className="
-        pt-16 flex flex-col gap-4
-        md:flex-row overflow-hidden
-      ">
+        py-16 flex flex-col gap-4
+        md:flex-row overflow-hidden"
+      >
         { 
           features.map((feature, index) => (
-            <div key={ index } 
-              className='text-white text-center
-                w-[343px] h-[264px] 
-                flex flex-col items-center justify-center gap-2
-                border border-white/40 rounded-xl
-                sm:w-[234px] sm:h-[312px]
-                lg:w-[330px] lg:h-[264px]
-              '
-            >
-              <div className='w-14 h-14 bg-white/80 rounded-lg 
-              m-2
-              flex justify-center items-center'>
-                <Image src={ Ecosystem } alt="ecosystem-img" height={ 20 } width={ 20 }
-                ></Image>
-              </div>
-              <h5 className='font-bold text-[16px]/[24px]'>{ feature.title }</h5>
-              <p className='w-[303px] text-white/70
-                sm:h-[128px] sm:w-[194.67px]
-              '>{ feature.description }</p>
+            <div key={ index }>
+              <Feature title={ feature.title } description={ feature.description }/>
             </div>
           ))
         }
