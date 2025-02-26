@@ -20,8 +20,9 @@ const images = [
 
 export const LogoTicker = () => {
   return (
-    <div className="w-full 
+    <div className="w-full
       flex flex-col justify-center items-center gap-8
+      overflow-hidden
       px-4 py-[72px]
       sm:w-full sm:py-24"
     >
@@ -34,7 +35,7 @@ export const LogoTicker = () => {
             translateX: 0
           }}
           animate={{
-            translateX: '-50%'
+            translateX: '-70%'
           }}
           transition={{
             ease: 'linear',

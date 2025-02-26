@@ -41,7 +41,7 @@ export const Features = () => {
 
       <div className="
         pt-16 flex flex-col gap-4
-        sm:flex-row
+        md:flex-row overflow-hidden
       ">
         { 
           features.map((feature, index) => (
@@ -49,10 +49,12 @@ export const Features = () => {
               className='text-white text-center
                 w-[343px] h-[264px] 
                 flex flex-col items-center justify-center gap-2
-                border border-white/70 rounded-xl
+                border border-white/40 rounded-xl
+                sm:w-[234px] sm:h-[312px]
+                lg:w-[330px] lg:h-[264px]
               '
             >
-              <div className='w-14 h-14 bg-white rounded-lg 
+              <div className='w-14 h-14 bg-white/80 rounded-lg 
               m-2
               flex justify-center items-center'>
                 <Image src={ Ecosystem } alt="ecosystem-img" height={ 20 } width={ 20 }
@@ -63,7 +65,6 @@ export const Features = () => {
                 sm:h-[128px] sm:w-[194.67px]
               '>{ feature.description }</p>
             </div>
-
           ))
         }
       </div>
